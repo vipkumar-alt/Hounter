@@ -1,0 +1,45 @@
+<section class="hero-section" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <div class="hero-copy__inner">
+      <h1 id="hero-title">
+        Find The Place To
+        <span class="line">Live <strong>Your Dreams</strong></span>
+        <span class="line">Easily Here</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Everything you need about finding your place to live will be here,
+        where it will be easier for you
+      </p>
+
+      <form class="search-card" aria-label="Search for a location" (submit)="$event.preventDefault()">
+        <span class="map-pin" aria-hidden="true"></span>
+        <label class="visually-hidden" for="location-search">Location</label>
+        <input id="location-search" name="location" type="search" placeholder="Search for the location you want!">
+        <button type="submit">
+          Search
+          <span class="search-arrow" aria-hidden="true"></span>
+        </button>
+      </form>
+
+      <div class="partners">
+        <p>Our Partnership</p>
+        <ul aria-label="Hounter partners">
+          <li *ngFor="let partner of partners" [class]="'partner-logo partner-logo--' + partner.className">
+            <img
+              class="partner-logo__image"
+              [ngClass]="'partner-logo__image--' + partner.className"
+              [src]="partner.logoSrc"
+              [alt]="partner.name + ' logo'"
+              decoding="async"
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual" aria-label="Modern white house exterior">
+    <img src="/assets/hero-section.png" alt="" aria-hidden="true">
+  </div>
+</section>

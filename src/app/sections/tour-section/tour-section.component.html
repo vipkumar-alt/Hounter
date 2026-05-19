@@ -1,0 +1,37 @@
+<section class="tour-section" aria-labelledby="tour-title">
+  <div class="tour-section__copy">
+    <div class="section-title section-title--left">
+      <span class="eyebrow">Ready to Sell!</span>
+      <h2 id="tour-title">Let's Tour And See Our House!</h2>
+    </div>
+
+    <p class="tour-section__intro">
+      Houses recommended by our partners that have been curated to become the
+      home of your dreams!
+    </p>
+
+    <h3 class="detail-title">House Detail</h3>
+    <div class="detail-grid" aria-label="House details">
+      <div class="detail-item" *ngFor="let detail of tourDetails">
+        <span class="detail-icon" [ngClass]="'detail-icon--' + detail.icon" aria-hidden="true"></span>
+        <span>{{ detail.label }}</span>
+      </div>
+    </div>
+
+    <div class="agent-row">
+      <img src="/assets/agent-dianne.png" alt="Dianne Russell" loading="lazy">
+      <div class="agent-row__text">
+        <strong>Dianne Russell</strong>
+        <span>Manchester, Kentucky</span>
+      </div>
+      <button class="contact-button" type="button">
+        <span class="phone-icon" aria-hidden="true"></span>
+        Contact Now
+      </button>
+    </div>
+  </div>
+
+  <div class="tour-section__media" aria-label="House tour preview">
+    <img src="/assets/tour-visual-composite.png" alt="House tour preview with interior details" loading="lazy">
+  </div>
+</section>

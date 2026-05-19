@@ -1,0 +1,31 @@
+<section class="review-section" aria-labelledby="review-title">
+  <div class="section-title section-title--center">
+    <span class="eyebrow">See Our Review</span>
+    <h2 id="review-title">What Our User Say About Us</h2>
+  </div>
+
+  <div class="review-slider" aria-label="Customer reviews" aria-live="polite">
+    <button class="review-slide review-slide--side" type="button" (click)="showPreviousTestimonial()" aria-label="Show previous review">
+      <img [src]="previousTestimonialCard.image" [alt]="previousTestimonialCard.alt" loading="lazy">
+    </button>
+
+    <article class="review-slide review-slide--main">
+      <img class="review-slide__photo" [src]="activeTestimonialCard.image" [alt]="activeTestimonialCard.alt" loading="lazy">
+    </article>
+
+    <button class="review-slide review-slide--side" type="button" (click)="showNextTestimonial()" aria-label="Show next review">
+      <img [src]="nextTestimonialCard.image" [alt]="nextTestimonialCard.alt" loading="lazy">
+    </button>
+  </div>
+
+  <div class="review-dots" aria-label="Review slides">
+    <button
+      *ngFor="let card of testimonialCards; let index = index"
+      [class.review-dots__active]="index === activeTestimonialIndex"
+      type="button"
+      [attr.aria-label]="'Go to ' + card.title + ' review'"
+      [attr.aria-current]="index === activeTestimonialIndex ? 'true' : null"
+      (click)="setTestimonial(index)">
+    </button>
+  </div>
+</section>

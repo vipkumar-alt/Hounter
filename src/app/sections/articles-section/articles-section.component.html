@@ -1,0 +1,44 @@
+<section class="articles-section" aria-labelledby="articles-title">
+  <div class="section-title section-title--center articles-section__title">
+    <span class="eyebrow">See tips and trick from our partnership</span>
+    <h2 id="articles-title">Find Out More About Selling And Buying Homes</h2>
+    <button class="more-articles-button" type="button">More Articles</button>
+  </div>
+
+  <div class="articles-layout">
+    <div class="article-list" aria-label="Latest home buying articles">
+      <article class="article-item" *ngFor="let article of articles">
+        <img class="article-item__image" [src]="article.image" [alt]="article.title" loading="lazy">
+        <div class="article-item__body">
+          <div class="article-author">
+            <img [src]="article.avatar" [alt]="article.author" loading="lazy">
+            <span>{{ article.author }}</span>
+          </div>
+          <h3>{{ article.title }}</h3>
+          <p class="article-meta">
+            <span class="clock-icon" aria-hidden="true"></span>
+            {{ article.readTime }} | {{ article.date }}
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <article class="article-feature">
+      <img class="article-feature__image" [src]="mainArticle.image" [alt]="mainArticle.title" loading="lazy">
+      <div class="article-author">
+        <img [src]="mainArticle.avatar" [alt]="mainArticle.author" loading="lazy">
+        <span>{{ mainArticle.author }}</span>
+      </div>
+      <h3>{{ mainArticle.title }}</h3>
+      <p class="article-feature__excerpt">
+        Want to buy a house but are unsure about what we should know, here I
+        will try to explain what we should know and check when we want to buy a
+        house.
+      </p>
+      <p class="article-meta">
+        <span class="clock-icon" aria-hidden="true"></span>
+        {{ mainArticle.readTime }} | {{ mainArticle.date }}
+      </p>
+    </article>
+  </div>
+</section>

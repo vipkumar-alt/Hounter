@@ -1,0 +1,51 @@
+<section class="featured-section" aria-labelledby="featured-title">
+  <div class="featured-section__top">
+    <div class="section-title section-title--left">
+      <span class="eyebrow">Our Recommendation</span>
+      <h2 id="featured-title">Featured House</h2>
+    </div>
+
+    <div class="property-filters" role="tablist" aria-label="Property type">
+      <button class="filter-pill filter-pill--active" type="button" role="tab" aria-selected="true">
+        <span class="filter-icon filter-icon--house" aria-hidden="true"></span>
+        House
+      </button>
+      <button class="filter-pill" type="button" role="tab" aria-selected="false">
+        <span class="filter-icon filter-icon--villa" aria-hidden="true"></span>
+        Villa
+      </button>
+      <button class="filter-pill" type="button" role="tab" aria-selected="false">
+        <span class="filter-icon filter-icon--apartment" aria-hidden="true"></span>
+        Apartment
+      </button>
+    </div>
+
+    <div class="section-arrows" aria-label="Featured house navigation">
+      <button class="round-nav round-nav--outline" type="button" aria-label="Previous featured houses" (click)="scrollFeatured(featuredScroller, -1)">
+        <span class="chevron chevron--left" aria-hidden="true"></span>
+      </button>
+      <button class="round-nav" type="button" aria-label="Next featured houses" (click)="scrollFeatured(featuredScroller, 1)">
+        <span class="chevron" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="featured-section__viewport" #featuredScroller tabindex="0" aria-label="Featured house cards">
+    <div class="property-track">
+      <article class="property-card" *ngFor="let home of featuredHomes">
+        <img class="property-card__image" [src]="home.image" [alt]="home.title + ' exterior'" loading="lazy">
+
+        <h3>{{ home.title }}</h3>
+        <p class="property-card__price">{{ home.price }}</p>
+
+        <div class="property-card__owner">
+          <img [src]="home.avatar" [alt]="home.owner" loading="lazy">
+          <div>
+            <strong>{{ home.owner }}</strong>
+            <span>{{ home.location }}</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<section class="subscribe-section" aria-labelledby="subscribe-title">
+  <div class="subscribe-card">
+    <img
+      *ngFor="let item of subscribeDecor"
+      class="subscribe-decor"
+      [ngClass]="item.className"
+      [src]="item.image"
+      [alt]="item.alt"
+      loading="lazy">
+
+    <h2 id="subscribe-title">Subscribe For More Info And Update From Hounter</h2>
+
+    <form class="subscribe-form" aria-label="Subscribe to Hounter updates" (submit)="$event.preventDefault()">
+      <span class="mail-icon" aria-hidden="true"></span>
+      <label class="visually-hidden" for="subscribe-email">Email address</label>
+      <input id="subscribe-email" type="email" placeholder="Your email here">
+      <button type="submit">Subscribe Now</button>
+    </form>
+  </div>
+</section>

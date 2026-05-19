@@ -1,0 +1,44 @@
+<section class="join-section" aria-labelledby="join-title">
+  <div class="join-info-card">
+    <h2 id="join-title">Would You Like To Join?</h2>
+    <p>Quickly get three quotes from these local that people love in online reviews.</p>
+    <span class="join-divider" aria-hidden="true"></span>
+    <p>Pick the whose estimate suits you best.</p>
+    <span class="join-divider" aria-hidden="true"></span>
+    <p>We then make sure the work i done to your complete satisfaction.</p>
+    <img src="/assets/form-illustration.png" alt="" aria-hidden="true" loading="lazy">
+  </div>
+
+  <form class="join-form" aria-label="Join Hounter" (submit)="$event.preventDefault()">
+    <div class="field-row">
+      <label for="join-name">Name</label>
+      <input id="join-name" type="text" placeholder="Your name">
+    </div>
+
+    <div class="field-row">
+      <label for="join-surname">Surname</label>
+      <input id="join-surname" type="text" placeholder="Your Surname">
+    </div>
+
+    <div class="field-row">
+      <label for="join-education">Education</label>
+      <select id="join-education" aria-label="Education">
+        <option>Select One</option>
+        <option>High School</option>
+        <option>Bachelor's Degree</option>
+        <option>Master's Degree</option>
+      </select>
+    </div>
+
+    <div class="field-row field-row--message">
+      <label for="join-message">Message</label>
+      <textarea id="join-message" maxlength="500" placeholder="Message"></textarea>
+      <span class="message-count">0/500</span>
+    </div>
+
+    <label class="consent-row">
+      <input type="checkbox" checked>
+      <span>I give consent to the processing of my personal data given in the contact form above under the terms and conditions of Grid Dynamics Privacy Policy.</span>
+    </label>
+  </form>
+</section>
