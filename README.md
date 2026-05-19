@@ -43,3 +43,7 @@ npm run build
 ## Project Description
 
 A clean real estate landing page designed to help users discover and explore homes easily.
+
+## UI Preview
+<img width="3018" height="1654" alt="image" src="https://github.com/user-attachments/assets/8d6375b9-b400-4e3d-8adb-375cb060b060" />
+
